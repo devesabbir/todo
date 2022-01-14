@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class_13</title>
+    <!-- fontAwesomeCdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+     <!-- icoMoon -->
+    <link rel="stylesheet" href="./icomoon/style.css">
+    <!-- mainStyleSheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <section class="clock_section">
+               <div class="container">
+                    <div class="clock_title">
+                         <h1>Digital Smartwatch</h1>
+                    </div>
+                    
+                    <div class="clock_bg">
+                          <div class="clock_body">
+                                 <div class="noti_area">
+                                      <div class="battery">
+                                         <span class="icon-battery-svgrepo-com"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                      </div>
+                                      <div class="date">
+                                           <span id="nDat"></span>
+                                           <span id="nMon"></span>
+                                           <span id="nYear"></span>
+                                      </div>
+                                 </div>
+         
+                                 <div class="hour_am">
+                                      <div id="hour"></div>
+                                      <div id="am_pm"></div>
+                                 </div>
+         
+                                 <div class="minute_sec">
+                                      <div id="minute"></div>
+                                      <div id="sec"></div>
+                                 </div>
+                                 <div id="day"></div>
+                          </div>
+                    </div>
+         
+               </div>
+     </section>
+
+     <section class="counter">
+              <div class="container">
+                   <div class="wrapper">
+                        <h1>Counter</h1>
+                    <div class="timeinput">
+                         <input id="input" type="text" placeholder="input Your Time">
+                         <span></span>
+                   </div>
+                   <div class="button_grp">
+                        <button id="start">Start</button>
+                        <button id="stop">Stop</button>
+                        <button id="reset">Reset</button>
+                   </div>
+                    <div id="loader"></div>
+                   <div class="output_box">
+                        <h1 id="output"></h1>
+                   </div>
+                   </div>
+              </div>
+     </section>
+
+     <section class="toSection">
+           <div class="container">
+                <div class="toArea">
+
+          
+               <div class="to-title">
+                    <h1>To Do List</h1>
+              </div>
+        
+              <form >
+                  <input class="todo-input" type="text"> 
+                  <button class="todo-button"><i class="fas fa-plus"></i></button>
+              </form>
+             
+              <div class="todo-container">
+                   <ul class="todo-list">
+        
+                   </ul>
+              </div>
+              </div> 
+           </div>
+     </section >
+
+      
+
+
+     <!-- functionScipt -->
+    <script src="function.js"></script>
+    <!-- mainScript -->
+    <script src="app.js"></script>
+</body>
+</html>
