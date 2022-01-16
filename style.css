@@ -5,6 +5,8 @@
     font-weight: normal;
 }
 
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -79,6 +81,7 @@ body {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
+    align-items: center;
 }
 
 .clock_section .clock_bg .clock_body .noti_area .battery {
@@ -97,7 +100,7 @@ body {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .clock_section .clock_bg .clock_body .hour_am div#hour {
@@ -111,7 +114,7 @@ body {
 
 .clock_section .clock_bg .clock_body .hour_am div#am_pm {
     flex-basis: 35%;
-    margin-top: 20px;
+    margin-top: 23px;
     font-size: 43px;
     color: rgb(224, 9, 9);
     text-shadow: rgb(246, 246, 246) 1px 1px 1px;
@@ -148,7 +151,7 @@ body {
 }
 
 .counter .wrapper {
-    width: 500px;
+    max-width: 500px;
     margin: auto;
     box-shadow: rgb(240 240 240) -8px 8px 0px -7px;
 }
@@ -307,4 +310,13 @@ div.todo-container ul.todo-list div.todo button.com-btn {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease 0s;
+}
+
+
+span.icon-battery-svgrepo-com {
+    transform: rotate(
+271deg
+);
+    display: inline-block;
+    font-size: 20px;
 }
