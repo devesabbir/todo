@@ -117,6 +117,10 @@ const iPoints = document.querySelector('#ipoints')
 const rPoints = document.querySelector('#rpoints')
 const svecha = document.querySelector('#svecha')
 const totl = document.querySelector('#totl')
+const totg = document.querySelector('#totg')
+const finpo = document.querySelector('#finpo')
+const fingr = document.querySelector('#fingr')
+const totm = document.querySelector('#totm')
 
 
 
@@ -136,7 +140,7 @@ check.addEventListener('click', function(){
   
 
    if(name.value == '' || roll.value == '' || isNaN(parseInt(bangla.value)) || isNaN(parseInt(english.value))  || isNaN(parseInt(math.value)) || isNaN(parseInt(science.value))  || isNaN(parseInt(ict.value) ) || isNaN(parseInt(reli.value))){
-        alert('all feild need must be fill !');
+        alert('all feild must be fill!');
 
     } else if(parseInt(bangla.value) < 33 || parseInt(english.value) < 33 || parseInt(math.value) < 33 || parseInt(science.value) < 33 || parseInt(ict.value) < 33 || parseInt(reli.value) < 33 ){
                
@@ -163,8 +167,11 @@ check.addEventListener('click', function(){
           rPoints.innerHTML = gpa(reli.value).points
 
           svecha.innerHTML = gpa(32).status
-          totl.innerHTML = gpaStatus(name.value,roll.value,32)
-         
+          totg.innerHTML = gpa(32).grade
+          finpo.innerHTML = 0
+          fingr.innerHTML = 'F'
+          totl.innerHTML = 0
+          totm.innerHTML = parseFloat(bangla.value) + parseFloat(english.value)  + parseFloat(math.value)  + parseFloat(science.value)  + parseFloat(ict.value) + parseFloat(reli.value)  
        
 
     }else{
@@ -196,13 +203,16 @@ check.addEventListener('click', function(){
          rRoll.innerHTML = roll.value
          svecha.innerHTML = gpa(netMarks).status
         
-         totl.innerHTML = gpaStatus(name.value,roll.value,netMarks)
-        
-      
-        // document.write(netMarks.toFixed(2));
-        // document.write(gpa(netMarks).grade);
-        // document.write(gpa(netMarks).points)
-        // document.write(gpaStatus(name.value,roll.value,netMarks))
+         totl.innerHTML =  ((gpa(bangla.value).points + gpa(english.value).points + gpa(math.value).points + gpa(science.value).points + gpa(ict.value).points + gpa(reli.value).points) / 6 ).toFixed(2)
+
+         totg.innerHTML  = gpa(netMarks).grade
+
+         finpo.innerHTML = ((gpa(bangla.value).points + gpa(english.value).points + gpa(math.value).points + gpa(science.value).points + gpa(ict.value).points + gpa(reli.value).points) / 6 ).toFixed(2)
+
+         fingr.innerHTML = gpa(netMarks).grade
+
+         totm.innerHTML = parseFloat(bangla.value) + parseFloat(english.value)  + parseFloat(math.value)  + parseFloat(science.value)  + parseFloat(ict.value) + parseFloat(reli.value)   
+
 
     }
 

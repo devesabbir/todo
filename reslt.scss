@@ -45,6 +45,8 @@
    
        .output {
 
+            padding-left: 20px ;
+
         .suveccha{
             
             padding: 20px 0;
@@ -57,7 +59,7 @@
 
            .information{
                display: grid;
-               grid-template-columns: 7% 93%;
+               grid-template-columns: 10% 90%;
                padding: 30px 0px;
 
                .left{
@@ -70,8 +72,9 @@
    
 
            table , td, th {
-               border: 1px solid #595959;
+               border: 2px solid #595959;
                border-collapse: collapse;
+               text-align: center;
            }
            td, th {
                padding: 3px;

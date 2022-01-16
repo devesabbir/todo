@@ -179,11 +179,6 @@ function dltCheck(event){
 }
 
 
-function gpaStatus(name,roll,marks){
-   return `
-          <p class="text-${gpa(marks).class}" >Hi ${name}, Your Roll ${roll} & Your gpa Grade is ${gpa(marks).grade} Your Points is ${gpa(marks).points} </p>
-   `  
-}
 
 
 
