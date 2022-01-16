@@ -163,7 +163,7 @@ check.addEventListener('click', function(){
           rPoints.innerHTML = gpa(reli.value).points
 
           svecha.innerHTML = gpa(32).status
-          totl.innerHTML = gpaStatus(name.value,roll.value,netMarks)
+          totl.innerHTML = gpaStatus(name.value,roll.value,32)
          
        
 
