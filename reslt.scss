@@ -1,0 +1,95 @@
+.result{
+        padding: 50px 0;
+    h1{
+        text-align: center;
+    }
+
+   .wrapper {
+       padding: 20px 0;
+       display: grid;
+       grid-template-columns: 40% 60%;
+       grid-template-rows: auto auto;
+       grid-gap: 10px 10px;
+       align-items: flex-end;
+   
+       .marks {
+           display: grid;
+           grid-template-columns: auto auto;
+           grid-gap: 10px 10px;
+           grid-template-rows: 40px 40px 40px 40px;
+           height: 240px;
+
+
+           input{
+               height: 45px;
+               padding: 10px;
+           }
+   
+           input[type="number"]::-webkit-inner-spin-button,
+           input[type="number"]::-webkit-outer-spin-button {
+               appearance: none;
+               -moz-appearance: none;
+           }
+   
+           #check {
+               grid-column-start: 1;
+               grid-column-end: 3;
+           }
+
+           button#check {
+            padding: 10px 10px;
+            font-size: 20px;
+            cursor: pointer;
+          }
+       }
+   
+       .output {
+
+        .suveccha{
+            
+            padding: 20px 0;
+
+               h1{
+                   
+               }
+
+        }
+
+           .information{
+               display: grid;
+               grid-template-columns: 7% 93%;
+               padding: 30px 0px;
+
+               .left{
+
+                     h5{
+                         padding: 5px 0;
+                     }
+               }
+           }
+   
+
+           table , td, th {
+               border: 1px solid #595959;
+               border-collapse: collapse;
+           }
+           td, th {
+               padding: 3px;
+               width: 30px;
+               height: 25px;
+           }
+           th {
+               background: #f0e6cc;
+           }
+           .even {
+               background: #fbf8f0;
+           }
+           .odd {
+               background: #fefcf9;
+           }
+           
+   
+       }
+   
+   }
+}

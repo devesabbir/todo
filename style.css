@@ -1,52 +1,310 @@
-@font-face { font-family: myFont; src: url("./fonts/digital-7.ttf") format("ttf"), url("./fonts/digital-7.woff") format("woff"), url("./fonts/digital-7.svg") format("svg"), url("./fonts/digital-7.otf") format("otf"), url("./fonts/digital-7.eot") format("eot"); font-style: normal; font-weight: normal; }
-* { margin: 0px; padding: 0px; box-sizing: border-box; }
-body { background: linear-gradient(90deg, rgb(207, 198, 59) 0%, rgb(116, 184, 169) 72%); font-family: Poppins, sans-serif; }
-.icon-battery-svgrepo-com .path1::before { content: ""; color: rgb(199, 202, 199); font-family: icomoon !important; }
-.icon-battery-svgrepo-com .path2::before { content: ""; color: rgb(231, 236, 237); margin-left: -1em; font-family: icomoon !important; }
-.icon-battery-svgrepo-com .path3::before { content: ""; color: rgb(199, 8, 77); margin-left: -1em; font-family: icomoon !important; }
-.container { max-width: 1000px; margin: auto; }
-.clock_section { padding: 25px 0px; }
-.clock_section .clock_title { text-align: center; }
-.clock_section .clock_title h1 { font-size: 25px; }
-.clock_section .clock_bg { width: 230px; background: url("./img/images-removebg-preview.png") center -50px / 290px no-repeat; margin: auto; height: 360px; position: relative; box-shadow: rgb(221, 221, 221) 10px 10px 1px -9px; font-family: myFont; }
-.clock_section .clock_bg .clock_body { background: url("./img/wp7562872.jpg") center center / cover no-repeat rgb(117, 17, 17); position: absolute; top: 23%; left: 36px; width: 69%; height: 50%; padding: 8px; border-radius: 30px; background-blend-mode: overlay; }
-.clock_section .clock_bg .clock_body .noti_area { display: flex; -webkit-box-pack: justify; justify-content: space-between; }
-.clock_section .clock_bg .clock_body .noti_area .battery { -webkit-box-ordinal-group: 3; order: 2; }
-.clock_section .clock_bg .clock_body .noti_area .date { -webkit-box-ordinal-group: 2; order: 1; font-family: myFont; color: darkorange; }
-.clock_section .clock_bg .clock_body .hour_am { display: flex; -webkit-box-pack: justify; justify-content: space-between; margin-top: 10px; }
-.clock_section .clock_bg .clock_body .hour_am div#hour { font-size: 70px; color: rgb(255, 233, 245); font-family: myFont; flex-basis: 60%; text-align: center; letter-spacing: 10px; }
-.clock_section .clock_bg .clock_body .hour_am div#am_pm { flex-basis: 35%; margin-top: 20px; font-size: 43px; color: rgb(224, 9, 9); text-shadow: rgb(246, 246, 246) 1px 1px 1px; }
-.clock_section .clock_bg .clock_body .minute_sec { display: flex; -webkit-box-pack: end; justify-content: center; color: rgb(255, 255, 255); font-family: myFont; }
-.clock_section .clock_bg .clock_body .minute_sec div#minute { font-size: 50px; margin-right: 5px; }
-.clock_section .clock_bg .clock_body .minute_sec div#sec { font-size: 19px; margin-top: auto; margin-bottom: 6px; }
-.clock_section .clock_bg .clock_body div#day { color: rgb(255, 255, 255); padding-left: 20px; font-family: myFont; text-align: right; }
-.counter { padding: 20px 0px; }
-.counter .wrapper {width: 500px;margin: auto;box-shadow: rgb(240 240 240) -8px 8px 0px -7px;}
-.counter .wrapper h1 { text-align: center; font-size: 25px; }
-.counter .timeinput { text-align: center; padding: 20px 20px 10px; }
-.counter .timeinput #input { width: 60%; border: none; outline: none; padding: 10px; border-radius: 5px; }
-.counter .button_grp { text-align: center; padding: 0px 0px 10px; font-family: myFont; }
-.counter .button_grp button { border: none; outline: none; padding: 10px; border-radius: 5px; }
-.counter .button_grp button#start { }
-.counter .button_grp button#stop { }
-.counter .button_grp button#reset { }
-.counter #loader { width: 100%; height: 33px; margin: auto; padding: 10px; color: rgb(255, 255, 255); }
-.counter .output_box { }
-.counter .output_box #output { }
-.toArea {box-shadow: rgb(240 240 240) 8px 8px 0px -7px;padding: 20px;}
-.to-title { display: flex; -webkit-box-pack: center; justify-content: center; }
-.to-title h1 { font-size: 30px; }
-form { display: flex; -webkit-box-pack: center; justify-content: center; }
-form input { border: none; outline: none; padding: 10px 20px; }
-form button { border: none; outline: none; padding: 10px 20px; transition: all 0.4s ease 0s; cursor: pointer; }
-form button i { color: orange; font-size: 20px; transition: all 0.4s ease 0s; }
-form button:hover, form button:hover i { background-color: orange; color: rgb(255, 255, 255); }
-div.todo-container { display: flex; -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; }
-div.todo-container ul.todo-list { list-style: none; min-width: 30%; }
-div.todo-container ul.todo-list div.todo { background-color: rgb(255, 255, 255); display: flex; -webkit-box-pack: justify; justify-content: space-between; -webkit-box-align: center; align-items: center; margin-top: 10px; }
-div.todo-container ul.todo-list div.todo li { -webkit-box-flex: 1; flex-grow: 1; padding: 0px 10px; }
-div.todo-container ul.todo-list div.todo button { background-color: rgb(255, 111, 71); color: rgb(255, 255, 255); border: none; outline: none; cursor: pointer; margin: 0px; padding: 10px 5px; }
-div.todo-container ul.todo-list div.todo button i { pointer-events: none; }
-div.todo-container ul.todo-list div.todo button.com-btn { background-color: green; }
-.complete { text-decoration: line-through; opacity: 0.4; transition: all 0.3s ease 0s; }
-.fall { transform: translateY(20px); opacity: 0; visibility: hidden; transition: all 0.5s ease 0s; }
+@font-face {
+    font-family: myFont;
+    src: url("./fonts/digital-7.ttf") format("ttf"), url("./fonts/digital-7.woff") format("woff"), url("./fonts/digital-7.svg") format("svg"), url("./fonts/digital-7.otf") format("otf"), url("./fonts/digital-7.eot") format("eot");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(207, 198, 59) 0%, rgb(116, 184, 169) 72%);
+    font-family: Poppins, sans-serif;
+}
+
+.icon-battery-svgrepo-com .path1::before {
+    content: "";
+    color: rgb(199, 202, 199);
+    font-family: icomoon !important;
+}
+
+.icon-battery-svgrepo-com .path2::before {
+    content: "";
+    color: rgb(231, 236, 237);
+    margin-left: -1em;
+    font-family: icomoon !important;
+}
+
+.icon-battery-svgrepo-com .path3::before {
+    content: "";
+    color: rgb(199, 8, 77);
+    margin-left: -1em;
+    font-family: icomoon !important;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.clock_section {
+    padding: 25px 0px;
+}
+
+.clock_section .clock_title {
+    text-align: center;
+}
+
+.clock_section .clock_title h1 {
+    font-size: 25px;
+}
+
+.clock_section .clock_bg {
+    width: 230px;
+    background: url("./img/images-removebg-preview.png") center -50px / 290px no-repeat;
+    margin: auto;
+    height: 360px;
+    position: relative;
+    box-shadow: rgb(221, 221, 221) 10px 10px 1px -9px;
+    font-family: myFont;
+}
+
+.clock_section .clock_bg .clock_body {
+    background: url("./img/wp7562872.jpg") center center / cover no-repeat rgb(117, 17, 17);
+    position: absolute;
+    top: 23%;
+    left: 36px;
+    width: 69%;
+    height: 50%;
+    padding: 8px;
+    border-radius: 30px;
+    background-blend-mode: overlay;
+}
+
+.clock_section .clock_bg .clock_body .noti_area {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.clock_section .clock_bg .clock_body .noti_area .battery {
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+}
+
+.clock_section .clock_bg .clock_body .noti_area .date {
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+    font-family: myFont;
+    color: darkorange;
+}
+
+.clock_section .clock_bg .clock_body .hour_am {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.clock_section .clock_bg .clock_body .hour_am div#hour {
+    font-size: 70px;
+    color: rgb(255, 233, 245);
+    font-family: myFont;
+    flex-basis: 60%;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+.clock_section .clock_bg .clock_body .hour_am div#am_pm {
+    flex-basis: 35%;
+    margin-top: 20px;
+    font-size: 43px;
+    color: rgb(224, 9, 9);
+    text-shadow: rgb(246, 246, 246) 1px 1px 1px;
+}
+
+.clock_section .clock_bg .clock_body .minute_sec {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: myFont;
+}
+
+.clock_section .clock_bg .clock_body .minute_sec div#minute {
+    font-size: 50px;
+    margin-right: 5px;
+}
+
+.clock_section .clock_bg .clock_body .minute_sec div#sec {
+    font-size: 19px;
+    margin-top: auto;
+    margin-bottom: 6px;
+}
+
+.clock_section .clock_bg .clock_body div#day {
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+    font-family: myFont;
+    text-align: right;
+}
+
+.counter {
+    padding: 20px 0px;
+}
+
+.counter .wrapper {
+    width: 500px;
+    margin: auto;
+    box-shadow: rgb(240 240 240) -8px 8px 0px -7px;
+}
+
+.counter .wrapper h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.counter .timeinput {
+    text-align: center;
+    padding: 20px 20px 10px;
+}
+
+.counter .timeinput #input {
+    width: 60%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.counter .button_grp {
+    text-align: center;
+    padding: 0px 0px 10px;
+    font-family: myFont;
+}
+
+.counter .button_grp button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.counter .button_grp button#start {}
+
+.counter .button_grp button#stop {}
+
+.counter .button_grp button#reset {}
+
+.counter #loader {
+    width: 100%;
+    height: 33px;
+    margin: auto;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.counter .output_box {}
+
+.counter .output_box #output {}
+
+.toArea {
+    box-shadow: rgb(240 240 240) 8px 8px 0px -7px;
+    padding: 20px;
+}
+
+.to-title {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.to-title h1 {
+    font-size: 30px;
+}
+
+form {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+form input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+}
+
+form button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+form button i {
+    color: orange;
+    font-size: 20px;
+    transition: all 0.4s ease 0s;
+}
+
+form button:hover,
+form button:hover i {
+    background-color: orange;
+    color: rgb(255, 255, 255);
+}
+
+div.todo-container {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+div.todo-container ul.todo-list {
+    list-style: none;
+    min-width: 30%;
+}
+
+div.todo-container ul.todo-list div.todo {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+div.todo-container ul.todo-list div.todo li {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 0px 10px;
+}
+
+div.todo-container ul.todo-list div.todo button {
+    background-color: rgb(255, 111, 71);
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0px;
+    padding: 10px 5px;
+}
+
+div.todo-container ul.todo-list div.todo button i {
+    pointer-events: none;
+}
+
+div.todo-container ul.todo-list div.todo button.com-btn {
+    background-color: green;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.4;
+    transition: all 0.3s ease 0s;
+}
+
+.fall {
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}

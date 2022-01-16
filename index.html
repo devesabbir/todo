@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./icomoon/style.css">
     <!-- mainStyleSheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reslt.css">
 </head>
 <body>
      <section class="clock_section">
@@ -92,9 +93,94 @@
            </div>
      </section >
 
-      
+     <section class="result">
+          <div class="container">
+          <h1>Result With Marksheet</h1>
+       <div class="wrapper">
+         <div class="marks">
+                <input id="name" type="text" placeholder="Your Name">
+                <input id="roll" type="number" placeholder="Your Roll">
+               <input id="bangla" type="number" placeholder="Bangla Marks">
+               <input id="english" type="number" placeholder="Bangla Marks">
+               <input id="math" type="number" placeholder="Bangla Marks">
+               <input id="science" type="number" placeholder="Bangla Marks">
+               <input id="ict" type="number" placeholder="Bangla Marks">
+               <input id="reli" type="number" placeholder="Bangla Marks">
 
+               <button id="check">Check</button>
+          </div>
+           
+          <div class="output">
+             <div class="suveccha"><h1 id="svecha"></h1></div>
+           <div class="information">
+               <div class="left">
+                  <h5>Name:</h5>
+                  <h5>Roll:</h5>
+               </div>
+               <div class="left">
+                    <h5 id="rname"></h5>
+                    <h5 id="rroll"></h5>
+               </div>
+           </div>
 
+           <div class="table">     
+
+            <table style="width: 100%;" border="0">
+               <tbody>
+                   <tr>
+                       <td>Subject</td>
+                       <td>Marks</td>
+                       <td>Grade</td>
+                       <td>Points</td>
+                   </tr>
+                   <tr>
+                       <td>Bangla</td>
+                       <td><span id="bmarks"></span></td>
+                       <td><span id="bgrade"></span></td>
+                       <td><span id="bpoints"></span></td>
+                   </tr>
+                   <tr>
+                       <td>English</td>
+                       <td><span id="emarks"></span></td>
+                       <td><span id="egrade"></span></td>
+                       <td><span id="epoints"></span></td>
+                   </tr>
+                   <tr>
+                       <td>Math</td>
+                       <td><span id="mmarks"></span></td>
+                       <td><span id="mgrade"></span></td>
+                       <td><span id="mpoints"></span></td>
+                   </tr>
+                   <tr>
+                       <td>Science</td>
+                       <td><span id="smarks"></span></td>
+                       <td><span id="sgrade"></span></td>
+                       <td><span id="spoints"></span></td>
+                   </tr>
+                   <tr>
+                       <td>ICT</td>
+                       <td><span id="imarks"></span></td>
+                       <td><span id="igrade"></span></td>
+                       <td><span id="ipoints"></span></td>
+                   </tr>
+                   <tr>
+                       <td>Religion</td>
+                       <td><span id="rmarks"></span></td>
+                       <td><span id="rgrade"></span></td>
+                       <td><span id="rpoints"></span></td>
+                   </tr>
+                   <tr>
+                       <td colspan="4"><h4 >TOTAL: <span id="totl"></span></h4></td>
+                       
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+         </div>
+         </div>
+     </div>
+     </section>
+  
      <!-- functionScipt -->
     <script src="function.js"></script>
     <!-- mainScript -->

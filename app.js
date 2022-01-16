@@ -90,3 +90,120 @@ const todoList = document.querySelector('.todo-list')
 
 todoButton.addEventListener('click',addTodo)
 todoList.addEventListener('click',dltCheck)
+
+
+//result
+
+const check = document.querySelector('#check')
+const rName = document.querySelector('#rname')
+const rRoll = document.querySelector('#rroll')
+const bMarks = document.querySelector('#bmarks')
+const eMarks = document.querySelector('#emarks')
+const mMarks = document.querySelector('#mmarks')
+const sMarks = document.querySelector('#smarks')
+const iMarks = document.querySelector('#imarks')
+const rMarks = document.querySelector('#rmarks')
+const bGrade = document.querySelector('#bgrade')
+const eGrade = document.querySelector('#egrade')
+const mGrade = document.querySelector('#mgrade')
+const sGrade = document.querySelector('#sgrade')
+const iGrade = document.querySelector('#igrade')
+const rGrade = document.querySelector('#rgrade')
+const bPoints = document.querySelector('#bpoints')
+const ePoints = document.querySelector('#epoints')
+const mPoints = document.querySelector('#mpoints')
+const sPoints = document.querySelector('#spoints')
+const iPoints = document.querySelector('#ipoints')
+const rPoints = document.querySelector('#rpoints')
+const svecha = document.querySelector('#svecha')
+const totl = document.querySelector('#totl')
+
+
+
+
+check.addEventListener('click', function(){
+    const name =document.querySelector('#name')
+    const roll =document.querySelector('#roll')
+    const bangla =document.querySelector('#bangla')
+    const english = document.querySelector('#english')
+    const math = document.querySelector('#math')
+    const science = document.querySelector('#science')
+    const ict = document.querySelector('#ict')
+    const reli =document.querySelector('#reli')
+     
+
+    const netMarks =((parseInt(bangla.value) + parseInt(english.value) + parseInt(math.value) + parseInt(science.value) + parseInt(ict.value)  + parseInt(reli.value)) / 6);
+  
+
+   if(name.value == '' || roll.value == '' || isNaN(parseInt(bangla.value)) || isNaN(parseInt(english.value))  || isNaN(parseInt(math.value)) || isNaN(parseInt(science.value))  || isNaN(parseInt(ict.value) ) || isNaN(parseInt(reli.value))){
+        alert('all feild need must be fill !');
+
+    } else if(parseInt(bangla.value) < 33 || parseInt(english.value) < 33 || parseInt(math.value) < 33 || parseInt(science.value) < 33 || parseInt(ict.value) < 33 || parseInt(reli.value) < 33 ){
+               
+          //marksSubwise
+          bMarks.innerHTML = bangla.value
+          eMarks.innerHTML = english.value
+          mMarks.innerHTML = math.value
+          sMarks.innerHTML = science.value
+          iMarks.innerHTML = ict.value
+          rMarks.innerHTML = reli.value
+          //gradeSubwise
+          bGrade.innerHTML = gpa(bangla.value).grade
+          eGrade.innerHTML = gpa(english.value).grade
+          mGrade.innerHTML = gpa(math.value).grade
+          sGrade.innerHTML = gpa(science.value).grade
+          iGrade.innerHTML = gpa(ict.value).grade
+          rGrade.innerHTML = gpa(reli.value).grade
+          //pointsSubWise
+          bPoints.innerHTML = gpa(bangla.value).points
+          ePoints.innerHTML = gpa(english.value).points
+          mPoints.innerHTML = gpa(math.value).points
+          sPoints.innerHTML = gpa(science.value).points
+          iPoints.innerHTML = gpa(ict.value).points
+          rPoints.innerHTML = gpa(reli.value).points
+
+          svecha.innerHTML = gpa(32).status
+          totl.innerHTML = gpaStatus(name.value,roll.value,netMarks)
+         
+       
+
+    }else{
+          //marksSubwise
+          bMarks.innerHTML = bangla.value
+          eMarks.innerHTML = english.value
+          mMarks.innerHTML = math.value
+          sMarks.innerHTML = science.value
+          iMarks.innerHTML = ict.value
+          rMarks.innerHTML = reli.value
+          //gradeSubwise
+          bGrade.innerHTML = gpa(bangla.value).grade
+          eGrade.innerHTML = gpa(english.value).grade
+          mGrade.innerHTML = gpa(math.value).grade
+          sGrade.innerHTML = gpa(science.value).grade
+          iGrade.innerHTML = gpa(ict.value).grade
+          rGrade.innerHTML = gpa(reli.value).grade
+          //pointsSubWise
+          bPoints.innerHTML = gpa(bangla.value).points
+          ePoints.innerHTML = gpa(english.value).points
+          mPoints.innerHTML = gpa(math.value).points
+          sPoints.innerHTML = gpa(science.value).points
+          iPoints.innerHTML = gpa(ict.value).points
+          rPoints.innerHTML = gpa(reli.value).points
+
+
+         //info
+         rName.innerHTML = name.value
+         rRoll.innerHTML = roll.value
+         svecha.innerHTML = gpa(netMarks).status
+        
+         totl.innerHTML = gpaStatus(name.value,roll.value,netMarks)
+        
+      
+        // document.write(netMarks.toFixed(2));
+        // document.write(gpa(netMarks).grade);
+        // document.write(gpa(netMarks).points)
+        // document.write(gpaStatus(name.value,roll.value,netMarks))
+
+    }
+
+})
